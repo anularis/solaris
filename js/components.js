@@ -16,11 +16,11 @@ const ROOT = document.documentElement.dataset.depth === '1' ? '../' : './';
 function injectNavbar() {
   const nav = document.createElement('nav');
   nav.id = 'navbar';
-  nav.innerHTML = 
+  nav.innerHTML = `
     <div class="container nav-inner">
       <a href="${ROOT}index.html" class="nav-logo">
         SOLARIS ATHENAEUM
-        <span>Academic &amp; Scholar</span>
+        <span>Anushka Nautiyal</span>
       </a>
       <div class="nav-links">
         <a href="${ROOT}research/index.html">Research</a>
@@ -38,7 +38,7 @@ function injectNavbar() {
         <span></span><span></span><span></span>
       </button>
     </div>
-  ;
+  `;
   document.body.prepend(nav);
 
   // Mobile nav
@@ -89,12 +89,12 @@ function injectSearch() {
 function injectFooter() {
   const footer = document.createElement('footer');
   footer.id = 'footer';
-  footer.innerHTML = 
+  footer.innerHTML = `
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
-          SOLARIS ATHENAEUM
-          <small>Scholar · IAS · Academic</small>
+          Anushka Nautiyal
+          <small>Solaris Athenaeum · Researcher · Academic</small>
         </div>
         <nav class="footer-links">
           <a href="${ROOT}research/index.html">Research</a>
@@ -105,19 +105,27 @@ function injectFooter() {
         </nav>
       </div>
       <div class="footer-copy">
-        <span>© 2025 [Scholar Name] — All rights reserved</span>
+        <span>© 2026 Anushka Nautiyal — Solaris Athenaeum — All rights reserved</span>
         <span style="font-style:italic;font-family:var(--ff-serif)">
           "The unexamined life is not worth living."
         </span>
       </div>
     </div>
-  ;
+  `;
   document.body.appendChild(footer);
 }
 
-/* ---- INIT ---- */
-document.addEventListener('DOMContentLoaded', () => {
-  injectNavbar();
-  injectSearch();
-  injectFooter();
-});
+/* ---- INIT — runs synchronously as script is in <body> top ---- */
+(function init() {
+  if (document.body) {
+    injectNavbar();
+    injectSearch();
+    injectFooter();
+  } else {
+    document.addEventListener('DOMContentLoaded', () => {
+      injectNavbar();
+      injectSearch();
+      injectFooter();
+    });
+  }
+})();

@@ -306,9 +306,15 @@ function initScrollReveal() {
 /* ============================================================
    INIT
    ============================================================ */
-document.addEventListener('DOMContentLoaded', () => {
+function boot() {
   initNavbar();
   initSearch();
   initHeroCanvas();
   initScrollReveal();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
+}
