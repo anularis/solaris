@@ -19,8 +19,8 @@ function injectNavbar() {
   nav.innerHTML = `
     <div class="container nav-inner">
       <a href="${ROOT}index.html" class="nav-logo">
-        [Scholar Portfolio]
-        <span>Academic &amp; Research</span>
+        SOLARIS ATHENAEUM
+        <span>Academic &amp; Scholar</span>
       </a>
       <div class="nav-links">
         <a href="${ROOT}research/index.html">Research</a>
@@ -93,8 +93,8 @@ function injectFooter() {
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
-          [Scholar Name]
-          <small>Researcher · Writer · Academic</small>
+          SOLARIS ATHENAEUM
+          <small>Scholar · IAS · Academic</small>
         </div>
         <nav class="footer-links">
           <a href="${ROOT}research/index.html">Research</a>
