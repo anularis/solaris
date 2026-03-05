@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-depth="1">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research — [Scholar Name]</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/animations.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+</head>
+<body>
+<script src="../js/components.js"></script>
+
+<!-- PAGE HERO -->
+<div class="page-hero page-transition">
+  <div class="container">
+    <p class="label">Research</p>
+    <h1>Academic Papers<br>&amp; Research</h1>
+    <p>
+      Peer-reviewed papers, working drafts, and research notes spanning
+      Egyptology, Psychology, International Relations, Policy, History,
+      and the Humanities.
+    </p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div style="border-bottom:1px solid var(--ash);padding-block:20px;position:sticky;top:var(--nav-h);background:rgba(10,9,6,0.95);backdrop-filter:blur(16px);z-index:100">
+  <div class="container">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <span class="label-muted" style="margin-right:8px">Filter:</span>
+      <button class="tag active" data-filter="all" onclick="filterResearch(this,'all')">All</button>
+      <button class="tag" data-filter="egyptology" onclick="filterResearch(this,'egyptology')">Egyptology</button>
+      <button class="tag" data-filter="psychology" onclick="filterResearch(this,'psychology')">Psychology</button>
+      <button class="tag" data-filter="ir" onclick="filterResearch(this,'ir')">Int'l Relations</button>
+      <button class="tag" data-filter="history" onclick="filterResearch(this,'history')">History</button>
+      <button class="tag" data-filter="policy" onclick="filterResearch(this,'policy')">Policy</button>
+      <button class="tag" data-filter="philosophy" onclick="filterResearch(this,'philosophy')">Philosophy</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESEARCH GRID -->
+<!-- ============================================================
+  HOW TO ADD NEW RESEARCH:
+  Copy a .research-item div below, update:
+    - data-tags="tag1 tag2"   (must match filter buttons)
+    - Title, abstract, year, status
+  ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div id="research-grid" style="display:flex;flex-direction:column;gap:2px">
+
+      <!-- ITEM — easily duplicated for new papers -->
+      <div class="research-item reveal" data-tags="egyptology history ir">
+        <div style="display:flex;gap:32px;padding:28px;border:1px solid var(--ash);transition:all 0.3s;cursor:pointer" onmouseenter="this.style.borderColor='rgba(232,200,74,0.3)'" onmouseleave="this.style.borderColor='var(--ash)'">
+          <div style="min-width:40px;padding-top:4px">
+            <span style="font-family:var(--ff-mono);font-size:0.62rem;color:var(--dust)">2025</span>
+          </div>
+          <div style="flex:1">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+              <span class="tag">Egyptology</span>
+              <span class="tag">History</span>
+              <span class="tag">Int'l Relations</span>
+            </div>
+            <h3 style="font-size:1.5rem;margin-bottom:10px;color:var(--white)">
+              Amarna &amp; the Heretic King: Akhenaten's Religious Revolution and Its Political Aftermath
+            </h3>
+            <p style="font-size:0.92rem;line-height:1.8;color:var(--mist);max-width:680px;margin-bottom:16px">
+              An investigation into Akhenaten's radical monotheistic revolution — its
+              psychological drivers, the structural conditions that enabled it, its violent
+              erasure under the Ramesside restoration, and the questions it raises for
+              modern theories of political and religious change.
+            </p>
+            <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+              <span style="font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);background:rgba(232,200,74,0.08);padding:4px 10px;border:1px solid rgba(232,200,74,0.2)">
+                Working Paper
+              </span>
+              <a href="#" style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);transition:opacity 0.2s" onmouseenter="this.style.opacity='0.7'" onmouseleave="this.style.opacity='1'">
+                Read →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-item reveal" data-tags="ir history policy">
+        <div style="display:flex;gap:32px;padding:28px;border:1px solid var(--ash);border-top:none;transition:all 0.3s;cursor:pointer" onmouseenter="this.style.borderColor='rgba(232,200,74,0.3)'" onmouseleave="this.style.borderColor='var(--ash)'">
+          <div style="min-width:40px;padding-top:4px">
+            <span style="font-family:var(--ff-mono);font-size:0.62rem;color:var(--dust)">2025</span>
+          </div>
+          <div style="flex:1">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+              <span class="tag">Int'l Relations</span>
+              <span class="tag">History</span>
+            </div>
+            <h3 style="font-size:1.5rem;margin-bottom:10px;color:var(--white)">
+              Diplomacy in the Ancient Near East: The Amarna Letters as Proto-Multilateralism
+            </h3>
+            <p style="font-size:0.92rem;line-height:1.8;color:var(--mist);max-width:680px;margin-bottom:16px">
+              The Amarna Archive contains the earliest surviving evidence of multilateral
+              diplomatic correspondence. This paper examines how these clay tablet letters
+              illuminate the deep origins of modern international norms, and what contemporary
+              IR theory misses by ignoring antiquity.
+            </p>
+            <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+              <span style="font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);background:rgba(232,200,74,0.08);padding:4px 10px;border:1px solid rgba(232,200,74,0.2)">
+                Working Paper
+              </span>
+              <a href="#" style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);transition:opacity 0.2s">Read →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-item reveal" data-tags="psychology history">
+        <div style="display:flex;gap:32px;padding:28px;border:1px solid var(--ash);border-top:none;transition:all 0.3s;cursor:pointer" onmouseenter="this.style.borderColor='rgba(232,200,74,0.3)'" onmouseleave="this.style.borderColor='var(--ash)'">
+          <div style="min-width:40px;padding-top:4px">
+            <span style="font-family:var(--ff-mono);font-size:0.62rem;color:var(--dust)">2025</span>
+          </div>
+          <div style="flex:1">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+              <span class="tag">Psychology</span>
+              <span class="tag">History</span>
+            </div>
+            <h3 style="font-size:1.5rem;margin-bottom:10px;color:var(--white)">
+              Memory, Identity &amp; the Archive: Collective Mnemonics in the Construction of Historical Consciousness
+            </h3>
+            <p style="font-size:0.92rem;line-height:1.8;color:var(--mist);max-width:680px;margin-bottom:16px">
+              Drawing on cognitive science, archival theory, and postcolonial studies,
+              this paper examines the mechanisms by which collective memory is constructed,
+              contested, and weaponised — with case studies from Ancient Egypt to the
+              contemporary post-conflict archive.
+            </p>
+            <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+              <span style="font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mist);background:rgba(90,85,68,0.2);padding:4px 10px;border:1px solid var(--ash)">
+                Draft
+              </span>
+              <a href="#" style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);transition:opacity 0.2s">Read →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-item reveal" data-tags="history policy">
+        <div style="display:flex;gap:32px;padding:28px;border:1px solid var(--ash);border-top:none;transition:all 0.3s;cursor:pointer" onmouseenter="this.style.borderColor='rgba(232,200,74,0.3)'" onmouseleave="this.style.borderColor='var(--ash)'">
+          <div style="min-width:40px;padding-top:4px">
+            <span style="font-family:var(--ff-mono);font-size:0.62rem;color:var(--dust)">2024</span>
+          </div>
+          <div style="flex:1">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+              <span class="tag">History</span>
+              <span class="tag">Policy</span>
+            </div>
+            <h3 style="font-size:1.5rem;margin-bottom:10px;color:var(--white)">
+              Decolonising the Historical Canon: Whose Past Is Taught?
+            </h3>
+            <p style="font-size:0.92rem;line-height:1.8;color:var(--mist);max-width:680px;margin-bottom:16px">
+              A critical examination of the epistemological foundations of Western
+              historiography, and a proposal for curricula that centre marginalised
+              histories without abandoning rigour.
+            </p>
+            <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+              <span style="font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);background:rgba(232,200,74,0.08);padding:4px 10px;border:1px solid rgba(232,200,74,0.2)">
+                Published
+              </span>
+              <a href="#" style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);transition:opacity 0.2s">Read →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-item reveal" data-tags="psychology philosophy ir">
+        <div style="display:flex;gap:32px;padding:28px;border:1px solid var(--ash);border-top:none;transition:all 0.3s;cursor:pointer" onmouseenter="this.style.borderColor='rgba(232,200,74,0.3)'" onmouseleave="this.style.borderColor='var(--ash)'">
+          <div style="min-width:40px;padding-top:4px">
+            <span style="font-family:var(--ff-mono);font-size:0.62rem;color:var(--dust)">2024</span>
+          </div>
+          <div style="flex:1">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+              <span class="tag">Psychology</span>
+              <span class="tag">Philosophy</span>
+              <span class="tag">Int'l Relations</span>
+            </div>
+            <h3 style="font-size:1.5rem;margin-bottom:10px;color:var(--white)">
+              Grief and Political Theory: Mourning as a Political Act
+            </h3>
+            <p style="font-size:0.92rem;line-height:1.8;color:var(--mist);max-width:680px;margin-bottom:16px">
+              Engaging Butler, Freud, and contemporary trauma theory to argue that
+              collective grief — when politicised — becomes one of the most potent
+              and undertheorised forces in international relations.
+            </p>
+            <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+              <span style="font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mist);background:rgba(90,85,68,0.2);padding:4px 10px;border:1px solid var(--ash)">
+                Draft
+              </span>
+              <a href="#" style="font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);transition:opacity 0.2s">Read →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- END RESEARCH GRID -->
+  </div>
+</section>
+
+<script src="../js/main.js"></script>
+<script>
+function filterResearch(btn, tag) {
+  document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.research-item').forEach(item => {
+    if (tag === 'all' || item.dataset.tags.includes(tag)) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

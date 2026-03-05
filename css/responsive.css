@@ -1,0 +1,49 @@
+/* ============================================================
+   RESPONSIVE — Tablet & Mobile overrides
+   ============================================================ */
+
+/* ---- About page two-column → single ---- */
+@media (max-width: 900px) {
+  .about-grid,
+  [style*="grid-template-columns:2fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  [style*="position:sticky;top:calc"] {
+    position: static !important;
+  }
+  [style*="border-left:1px solid var(--ash);padding-left:40px"] {
+    border-left: none !important;
+    padding-left: 0 !important;
+    border-top: 1px solid var(--ash) !important;
+    padding-top: 32px !important;
+  }
+}
+
+/* ---- Hero layout ---- */
+@media (max-width: 640px) {
+  .hero-stats { gap: 24px; }
+  .hero-stat-num { font-size: 1.8rem; }
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn { justify-content: center; }
+  .hero-coords { display: none; }
+}
+
+/* ---- Research grid single col on small ---- */
+@media (max-width: 640px) {
+  [style*="display:flex;gap:32px;padding:28px"] {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+}
+
+/* ---- Card grids ---- */
+@media (max-width: 520px) {
+  .card { padding: 24px; }
+}
+
+/* ---- Footer ---- */
+@media (max-width: 640px) {
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
