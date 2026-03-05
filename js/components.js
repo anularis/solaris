@@ -16,7 +16,7 @@ const ROOT = document.documentElement.dataset.depth === '1' ? '../' : './';
 function injectNavbar() {
   const nav = document.createElement('nav');
   nav.id = 'navbar';
-  nav.innerHTML = `
+  nav.innerHTML = 
     <div class="container nav-inner">
       <a href="${ROOT}index.html" class="nav-logo">
         SOLARIS ATHENAEUM
@@ -38,7 +38,7 @@ function injectNavbar() {
         <span></span><span></span><span></span>
       </button>
     </div>
-  `;
+  ;
   document.body.prepend(nav);
 
   // Mobile nav
@@ -89,7 +89,7 @@ function injectSearch() {
 function injectFooter() {
   const footer = document.createElement('footer');
   footer.id = 'footer';
-  footer.innerHTML = `
+  footer.innerHTML = 
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
@@ -111,7 +111,7 @@ function injectFooter() {
         </span>
       </div>
     </div>
-  `;
+  ;
   document.body.appendChild(footer);
 }
 
